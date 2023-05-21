@@ -27,4 +27,6 @@ To build and flash the code to your ESP32 microcontroller, follow these steps:
     "idf.monitorBaudRate": "115200"
 }
 ```
+## References :
 
+[1] https://esp32tutorials.com/esp32-gpio-esp-idf-led-blinking-example/
