@@ -15,5 +15,8 @@
     "idf.toolsPathWin": "C:\\Users\\acer\\.espressif",
     "idf.flashType": "UART",
     "idf.portWin": "COM3",
-    "idf.monitorBaudRate": "115200"
+    "idf.monitorBaudRate": "115200",
+    "files.associations": {
+        "semphr.h": "c"
+    }
 }
