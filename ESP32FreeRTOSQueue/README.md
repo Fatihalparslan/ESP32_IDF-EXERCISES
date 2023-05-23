@@ -12,7 +12,7 @@ The project When the button is pressed, a value is passed to queue ,after that r
 - 10uF electrolytic Capacitor
 ## Hardware Setup
 ESP32 DevKit V4 board is used fot this project wire components as the picture below:
-![alt text](ESP32-IDF-BUTTON-INTERRUPT-EXAMPLE\BT1.png)
+![alt text](BT1.png)
 ## Usage
 
 1. Connect an LED to GPIO pin 26 (LedPin) and a button to GPIO pin 33 (ButtonPin).
