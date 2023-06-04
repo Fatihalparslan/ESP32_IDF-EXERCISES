@@ -50,7 +50,6 @@ gpio_config(&led_conf);
 xSMutex=xSemaphoreCreateMutex();
 xSemaphoreGive(xSMutex);
 gpio_set_level(LED_Pin,1);
-ESP_LOGI("here","here");
 xTaskCreate(LedOnTask,"Led On",1024,NULL,5,LedOn);
 xTaskCreate(LedOffTask,"Led Off",1024,NULL,5,Ledoff);
 }
