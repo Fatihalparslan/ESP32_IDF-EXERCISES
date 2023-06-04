@@ -1,5 +1,5 @@
-#ifndef _FOTA_H_
-#define _FOTA_H_
+#ifndef _NETWORK_H_
+#define _NETWORK_H_
 
 #include "esp_wifi.h"
 #include "esp_event.h"
