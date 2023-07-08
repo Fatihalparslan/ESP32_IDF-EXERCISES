@@ -1,4 +1,4 @@
-# ESP32 DEBIG LOG EXAMPLE
+# ESP32 DEBUG LOG EXAMPLE
 
 This code demonstrates a simple example for `esp_log.h` on ESP-IDF(Espressif IoT Development Framework) for ESP32 microcontrollers.
 It shows setting a `TAG` for log level and gives examples for different kind of log function.

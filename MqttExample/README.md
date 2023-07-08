@@ -1,32 +1,33 @@
-# LED BLINK EXAMPLE
+# MQTT Publisher Example
 
-This code demonstrates a simple LED Blink example using ESP-IDF(Espressif IoT Development Framework) for ESP32 microcontrollers.
-It toggles a LED for every 1 seconds.
+This is an example code for an MQTT publisher using the ESP32 platform. It establishes a connection to an MQTT broker and publishes a message to a specified topic at regular intervals. The code also includes an MQTT event handler to handle various events such as connection, disconnection, subscription, and received data.
 
-## Requirements
+## Prerequisites
 
-To run this code you need VSCode editor and ESP-IDF extention for VSCode
+- ESP32 development board
+- ESP-IDF framework installed
+- MQTT broker accessible with the provided URI, username, and password
 
-## Hardware Setup
+## Instructions
 
-Connect an LED and a 220-ohm resistor to GPIO 26 on your ESP32 DevKit V4 board. Refer to the pinout diagram below:
+1. Ensure that the ESP-IDF framework is installed on your development environment.
+2. Create a new project and include the necessary libraries and headers.
+3. Copy and paste the provided code into your project.
+4. Modify the MQTT broker URI, username, and password in the `mqtt_app_start` function to match your setup.
+5. Build and flash the project to your ESP32 development board.
+6. Monitor the output logs to check the MQTT connection status and message publishing.
 
-![Alt text](esp32-devkitC-v4-pinout.png?raw=true "Title")
+## Code Explanation
 
-## Building and Flashing
+- The `mqtt_event_handler` function handles various MQTT events, such as connection, disconnection, subscription, publication, and received data. It logs relevant information based on each event.
+- The `mqtt_app_start` function initializes the MQTT client with the provided MQTT broker URI, username, and password. It also registers the event handler and starts the client.
+- The `Publisher_Task` function is a FreeRTOS task that runs continuously. It checks if the MQTT client is connected and publishes a message to the specified topic at regular intervals.
+- The `app_main` function is the entry point of the program. It initializes the NVS (Non-Volatile Storage) and starts the Wi-Fi station. It also creates the `Publisher_Task` task.
 
-To build and flash the code to your ESP32 microcontroller, follow these steps:
+Feel free to modify the code according to your specific requirements, such as changing the MQTT broker details, topic names, or message contents.
 
-1. Download repository and extract it. 
-2. Open Visual Studio Code (VSCode) and go to File → Open Folder. Choose the `ESP32_IDF-EXERCISES-main\led_blink\`  folder.
-3. Modify the `.vscode\settings.json` file with the following configuration:
-```
-{
-    "idf.adapterTargetName": "esp32",
-    "idf.portWin": "COM3",
-    "idf.monitorBaudRate": "115200"
-}
-```
-## References :
+Please note that this code assumes you have set up the necessary network configuration, such as Wi-Fi credentials, in the `WiFi_Start_Sta` function. Ensure that you have the appropriate network settings before running the code.
 
-[1] https://esp32tutorials.com/esp32-gpio-esp-idf-led-blinking-example/
+For more information on the ESP-IDF framework and MQTT library, refer to the respective documentation and examples provided by Espressif.
+
+Happy coding!
